@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Register - My Blog App</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<script type="module" defer src="../JS/auth/register.js"></script>
+	</head>
+	<body>
+		<div class="register-container">
+			<h1>Register</h1>
+			<!-- HUSK Å NEVNE NOVALIDATE I RAPPORTEN!  -->
+			<form class="register-form" id="register-form" novalidate>
+				<!-- Required Fields -->
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name" required />
+
+				<label for="email">Email (must be a stud.noroff.no email):</label>
+				<input type="email" name="email" id="email" required />
+
+				<label for="password">Password (min 8 characters):</label>
+				<input type="password" name="password" id="password" required />
+
+				<label for="confirmPassword">Confirm Password:</label>
+				<input type="password" name="confirmPassword" id="confirmPassword" required />
+
+				<button type="submit">Register</button>
+			</form>
+			<div id="error-message" style="color: red"></div>
+			<div id="success-message" style="color: green"></div>
+		</div>
+	</body>
+</html>
