@@ -9,28 +9,33 @@
 		<script type="module" defer src="../JS/post/edit.js"></script>
 	</head>
 	<body>
-		<div class="post-edit-container">
-			<h1>Create/Edit Post</h1>
-			<form id="post-form" novalidate>
-				<label for="title">Title (required):</label>
-				<input type="text" id="title" name="title" required />
+		<header></header>
 
-				<label for="body">Content:</label>
-				<textarea id="body" name="body"></textarea>
+		<main>
+			<div class="post-edit-container">
+				<h1>Create/Edit Post</h1>
+				<form id="post-form" novalidate>
+					<label for="title">Title (required):</label>
+					<input type="text" id="title" name="title" required />
 
-				<label for="tags">Tags (comma separated):</label>
-				<input type="text" id="tags" name="tags" />
+					<label for="body">Content:</label>
+					<textarea id="body" name="body"></textarea>
 
-				<label for="mediaUrl">Image URL:</label>
-				<input type="url" id="mediaUrl" name="mediaUrl" />
+					<label for="tags">Tags (comma separated):</label>
+					<input type="text" id="tags" name="tags" />
 
-				<label for="mediaAlt">Image Alt Text:</label>
-				<input type="text" id="mediaAlt" name="mediaAlt" />
+					<label for="mediaUrl">Image URL:</label>
+					<input type="url" id="mediaUrl" name="mediaUrl" />
 
-				<button type="submit">Save Post</button>
-			</form>
-			<div id="error-message" style="color: red"></div>
-			<div id="success-message" style="color: green"></div>
-		</div>
+					<label for="mediaAlt">Image Alt Text:</label>
+					<input type="text" id="mediaAlt" name="mediaAlt" />
+
+					<button type="submit">Save Post</button>
+				</form>
+				<div id="error-message" style="color: red"></div>
+				<div id="success-message" style="color: green"></div>
+			</div>
+		</main>
+		<footer></footer>
 	</body>
 </html>

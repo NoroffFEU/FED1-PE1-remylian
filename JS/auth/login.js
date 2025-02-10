@@ -1,39 +1,31 @@
 import { apiRequest } from '../api.js';
+import { withErrorHandling } from '../errorhandling.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-	// Select the form and error message container
 	const loginForm = document.getElementById('login-form');
 	const errorMessageDiv = document.getElementById('error-message');
 
-	loginForm.addEventListener('submit', async (event) => {
-		event.preventDefault();
-		errorMessageDiv.textContent = '';
+	loginForm.addEventListener(
+		'submit',
+		withErrorHandling(async (event) => {
+			event.preventDefault();
+			errorMessageDiv.textContent = '';
 
-		// Collect form data
-		const email = loginForm.email.value.trim();
-		const password = loginForm.password.value;
+			const email = loginForm.email.value.trim();
+			const password = loginForm.password.value;
+			if (!email || !password) {
+				throw new Error('Both email and password are required.');
+			}
 
-		// Simple validation: Ensure both fields are filled
-		if (!email || !password) {
-			errorMessageDiv.textContent = 'Both email and password are required.';
-			return;
-		}
+			const response = await apiRequest('/auth/login', 'POST', { email, password });
+			console.log('Login response:', response);
 
-		try {
-			// Call the API to log in.
-			const data = await apiRequest('/auth/login', 'POST', { email, password });
+			const { data: userData } = response;
+			localStorage.setItem('authToken', userData.accessToken);
+			localStorage.setItem('username', userData.name);
+			console.log(userData.name);
 
-			const token = data.token;
-
-			// Save the token to localStorage (for future API requests)
-			localStorage.setItem('authToken', token);
-
-			// Redirect the user after successful login.
 			window.location.href = '../index.html';
-		} catch (error) {
-			// If error occurs, display thematic error message
-			errorMessageDiv.textContent =
-				'Your feeble lockpicking skills are no match for our dwarven smiths! Please obtain proper access before attempting to regain access';
-		}
-	});
+		}, errorMessageDiv)
+	);
 });

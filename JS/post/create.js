@@ -1,54 +1,55 @@
-// JS/post/create.js
-
 import { apiRequest } from '../api.js';
+import { withErrorHandling } from '../errorhandling.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const postForm = document.getElementById('post-form');
 	const errorMessageDiv = document.getElementById('error-message');
 	const successMessageDiv = document.getElementById('success-message');
 
-	// Replace with your actual username or retrieve it from session/localStorage.
-	const username = 'Test_Adventurer';
+	// Get username from localStorage
+	const username = localStorage.getItem('username');
 
-	postForm.addEventListener('submit', async (event) => {
-		event.preventDefault();
-		errorMessageDiv.textContent = '';
-		successMessageDiv.textContent = '';
+	// Add event listener, wrap with withErrorHandling.
+	postForm.addEventListener(
+		'submit',
+		withErrorHandling(async (event) => {
+			event.preventDefault();
+			errorMessageDiv.textContent = '';
+			successMessageDiv.textContent = '';
 
-		// Gather form data
-		const title = postForm.title.value.trim();
-		const body = postForm.body.value.trim();
+			// Gather and trim form values
+			const title = postForm.title.value.trim();
+			const body = postForm.body.value.trim();
 
-		// Validate required field(s)
-		if (!title) {
-			errorMessageDiv.textContent = 'Title is required.';
-			return;
-		}
+			const mediaUrl = postForm.mediaUrl ? postForm.mediaUrl.value.trim() : '';
+			const mediaAlt = postForm.mediaAlt ? postForm.mediaAlt.value.trim() : '';
 
-		// Build the payload following API documentation
-		const payload = {
-			title,
-			...(body && { body }),
-			...(tags.length > 0 && { tags }),
-			...(mediaUrl && { media: { url: mediaUrl, alt: mediaAlt || '' } }),
-		};
+			// validation: Title
+			if (!title) {
+				throw new Error('Title is required.');
+			}
 
-		try {
-			// Make the POST request to create a new post:
-			const response = await apiRequest(`/blog/posts/${username}`, 'POST', payload);
+			// payload for API request
+			const payload = {
+				title,
+				...(body && { body }),
+				...(mediaUrl && { media: { url: mediaUrl, alt: mediaAlt || '' } }),
+			};
+
+			//  API call to create a new post
+			const token = localStorage.getItem('authToken');
+			const response = await apiRequest(`/blog/posts/${username}`, 'POST', payload, token);
+
 			console.log('Post created successfully:', response);
 			successMessageDiv.textContent = 'Post published successfully!';
 
-			// Extract the new post's id from the response
+			// collect post ID from response
 			const newPostId = response.data.id;
 
-			// Redirect to the newly created post's detail page after a short delay
+			// Redirect to post details
 			setTimeout(() => {
 				window.location.href = `../post/index.html?id=${newPostId}`;
 			}, 1500);
-		} catch (error) {
-			console.error('Error creating post:', error);
-			errorMessageDiv.textContent = error.message;
-		}
-	});
+		}, errorMessageDiv)
+	);
 });

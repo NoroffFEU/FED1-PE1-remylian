@@ -3,23 +3,28 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>add post</title>
+		<title>View Post - My Blog App</title>
 		<link rel="stylesheet" href="../css/style.css" />
-		<script type="module" defer src="/JS/feed.js"></script>
+		<script type="module" defer src="../JS/post/display.js"></script>
 	</head>
 	<body>
 		<header>
-			<!-- to be added -->
+			<h1>My Blog App</h1>
+			<nav>
+				<ul>
+					<li><a href="/index.html">home</a></li>
+				</ul>
+			</nav>
+			<!-- Navigation links -->
 		</header>
 
 		<main>
-			<div class="post-content">
-				<!-- post content goes here -->
-			</div>
+			<div id="post-error-message" style="color: red"></div>
+			<div id="post-content"></div>
 		</main>
 
 		<footer>
-			<!-- to be added -->
+			<!-- Footer content -->
 		</footer>
 	</body>
 </html>
