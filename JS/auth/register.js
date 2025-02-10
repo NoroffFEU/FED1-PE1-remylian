@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Collect required form values
 			const name = registerForm.name.value.trim();
-			const email = registerForm.email.value.trim(); //lowercase, case insensitive
+			const email = registerForm.email.value.trim(); //lowercase, case insensitive.
 			const password = registerForm.password.value;
 			const confirmPassword = registerForm.confirmPassword.value;
 
