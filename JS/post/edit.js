@@ -29,9 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 		// Pre-fill form fields.
 		postForm.title.value = postData.title;
 		postForm.body.value = postData.body || '';
-		if (postForm.tags) {
-			postForm.tags.value = postData.tags ? postData.tags.join(', ') : '';
-		}
+
 		if (postForm.mediaUrl) {
 			postForm.mediaUrl.value = postData.media ? postData.media.url : '';
 		}
@@ -76,8 +74,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 				...(mediaUrl && { media: { url: mediaUrl, alt: mediaAlt || '' } }),
 			};
 
+			// get token from localStorage
+			const token = localStorage.getItem('authToken');
+			if (!token) {
+				throw new Error('No authentication token found. Please log in again');
+			}
+
 			// Send update to the API
-			const response = await apiRequest(`/blog/posts/${username}/${postId}`, 'PUT', payload);
+			const response = await apiRequest(`/blog/posts/${username}/${postId}`, 'PUT', payload, token);
 			console.log('Post updated successfully:', response);
 			successMessageDiv.textContent = 'Post updated successfully!';
 
@@ -88,14 +92,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 		}, errorMessageDiv)
 	);
 
-	// event listener for delete button (ikke laget button enda)
+	// event listener for delete button
 	if (deleteButton) {
 		deleteButton.addEventListener(
 			'click',
 			withErrorHandling(async () => {
-				// Confirm deletion with the user.
-				if (!confirm('Are you sure you want to delete this post? This action cannot be undone.')) {
+				// Confirm deletion from user.
+				if (!confirm('Are you sure you want to DELETE this post? This action cannot be undone!')) {
 					return;
+				}
+
+				// get token from localStorage
+				const token = localStorage.getItem('authToken');
+				if (!token) {
+					throw new Error('No authentication token found. Please log in');
 				}
 
 				// Call API to delete the post
@@ -106,7 +116,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 				// Redirect to blog feed after deletion
 				setTimeout(() => {
 					window.location.href = '/index.html';
-				}, 1500);
+				}, 2500);
 			}, errorMessageDiv)
 		);
 	}

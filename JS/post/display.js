@@ -33,10 +33,9 @@ function renderPost(post) {
 		return;
 	}
 
-	// Clear any existing content.
 	postContainer.innerHTML = '';
 
-	// Create and append post title.
+	// Create and append the post title.
 	const titleElem = document.createElement('h1');
 	titleElem.textContent = post.title;
 	postContainer.appendChild(titleElem);
@@ -49,7 +48,7 @@ function renderPost(post) {
 	metaElem.textContent = `By ${post.author?.name || 'Unknown'} on ${publishedDate}`;
 	postContainer.appendChild(metaElem);
 
-	// Create and append image banner
+	// Create and append the image banner, if available.
 	if (post.media?.url) {
 		const imageElem = document.createElement('img');
 		imageElem.src = post.media.url;
@@ -58,9 +57,46 @@ function renderPost(post) {
 		postContainer.appendChild(imageElem);
 	}
 
-	// Create and append post body/content
+	// Create and append the post body/content.
 	const bodyElem = document.createElement('div');
 	bodyElem.className = 'post-body';
 	bodyElem.innerHTML = post.body;
 	postContainer.appendChild(bodyElem);
+
+	// Check if the logged-in user is the post owner to conditionally show the buttons.
+	const loggedInUsername = localStorage.getItem('username');
+	if (loggedInUsername && post.author && loggedInUsername === post.author.name) {
+		// Create a container for the buttons.
+		const buttonContainer = document.createElement('div');
+		buttonContainer.className = 'button-container';
+
+		// Create the "Edit Post" button.
+		const editButton = document.createElement('button');
+		editButton.textContent = 'Edit Post';
+		editButton.addEventListener('click', () => {
+			// Fix the URL (remove any duplicate .html)
+			window.location.href = `/post/edit.html?username=${encodeURIComponent(post.author.name)}&id=${post.id}`;
+		});
+		buttonContainer.appendChild(editButton);
+
+		// Create the "Delete Post" button.
+		const deleteButton = document.createElement('button');
+		deleteButton.textContent = 'Delete Post';
+		deleteButton.addEventListener('click', async () => {
+			if (confirm('Are you sure you want to DELETE this post? This action cannot be undone!')) {
+				try {
+					const token = localStorage.getItem('authToken');
+					await apiRequest(`/blog/posts/${post.author.name}/${post.id}`, 'DELETE', null, token);
+					alert('Post deleted successfully!');
+					window.location.href = '/index.html';
+				} catch (error) {
+					alert('Error deleting post: ' + error.message);
+				}
+			}
+		});
+		buttonContainer.appendChild(deleteButton);
+
+		// Append the button container to the post container.
+		postContainer.appendChild(buttonContainer);
+	}
 }

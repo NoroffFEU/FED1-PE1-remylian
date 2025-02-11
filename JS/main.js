@@ -35,7 +35,7 @@ function createThumbnail(post) {
   `;
 	// Pass the username (from the post author)
 	thumb.addEventListener('click', () => {
-		const authorName = post.author?.name || 'MainUser';
+		const authorName = post.author?.name || localStorage.getItem('username') || 'MainUser';
 		window.location.href = `/post/index.html?username=${encodeURIComponent(authorName)}&id=${post.id}`;
 	});
 	return thumb;

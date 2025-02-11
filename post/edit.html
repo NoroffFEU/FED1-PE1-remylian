@@ -21,9 +21,6 @@
 					<label for="body">Content:</label>
 					<textarea id="body" name="body"></textarea>
 
-					<label for="tags">Tags (comma separated):</label>
-					<input type="text" id="tags" name="tags" />
-
 					<label for="mediaUrl">Image URL:</label>
 					<input type="url" id="mediaUrl" name="mediaUrl" />
 
@@ -32,6 +29,9 @@
 
 					<button type="submit">Save Post</button>
 				</form>
+				<!-- Delete button outside the form element to avoid submitting the form -->
+				<button id="delete-button" type="button">Delete Post</button>
+
 				<div id="error-message" style="color: red"></div>
 				<div id="success-message" style="color: green"></div>
 			</div>
