@@ -1,5 +1,3 @@
-// JS/carousel.js
-
 export function initCarousel(posts) {
 	// Check if posts array is provided and not empty.
 	if (!posts || posts.length === 0) {

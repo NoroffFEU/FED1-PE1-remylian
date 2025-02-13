@@ -1,3 +1,5 @@
+@import url(./partials/reset.css);
+
 h1 {
 	text-align: center;
 }
@@ -10,9 +12,67 @@ form {
 	color: rgb(155, 199, 238);
 }
 body {
+	/* background-color: black;
+	color: aliceblue; */
 }
 
-.create-post.button {
-	background-color: rgb(91, 180, 146);
-	color: aliceblue;
+.user-status {
+	display: flex;
+	justify-content: end;
+}
+
+ul {
+	list-style: none;
+	border: 1px solid black;
+}
+
+.logout-button {
+	margin-left: 1rem;
+}
+
+.feed-errormsg {
+	color: red;
+}
+
+.header-nav ul {
+	border: 1px solid black;
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+}
+
+.nav-all li {
+	padding-right: 1rem;
+}
+
+.nav-admin {
+	border: 1px solid black;
+	text-align: center;
+}
+
+.carousel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.carousel button {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	height: 4rem;
+	width: 4rem;
+}
+
+.carousel img {
+	max-width: 30rem;
+}
+
+.thumbnail-grid {
+	border: 1px solid black;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax (30rem, 1fr));
+}
+.thumbnail img {
+	max-width: 10rem;
 }

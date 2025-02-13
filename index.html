@@ -10,39 +10,33 @@
 	<body>
 		<header>
 			<h1>My Blog App</h1>
-			<nav>
-				<!-- Navigation for all users -->
-				<ul>
-					<li><a href="/index.html">Home</a></li>
-					<li><a href="/account/register.html">Register</a></li>
-					<li><a href="/account/login.html">Log in</a></li>
-				</ul>
+			
+			<!-- Container for conditional rendering of nav-items -->
+			<nav class="header-nav" id="header-nav">				
 			</nav>
-			<!-- Admin navigation for logged-in users -->
-			<nav id="admin-nav">
-				<!-- "Create New Post" button will be dynamically inserted here -->
+				
 			</nav>
 		</header>
 		<main>
 			<!-- Error container for displaying feed errors -->
-			<div id="feed-error-message" style="color: red"></div>
+			<div id="feed-error-message" class="feed-errormsg"></div>
 
 			<!-- Carousel Section -->
 			<section id="banner-carousel" class="carousel" aria-label="Featured Posts">
-				<button id="prev-btn" aria-label="Previous Post">&lt;</button>
+				<button class="prev-btn" id="prev-btn" aria-label="Previous Post">&lt;</button>
 				<div id="carousel-container" class="carousel-container">
 					<!-- Carousel items will be inserted here by main.js -->
 				</div>
-				<button id="next-btn" aria-label="Next Post">&gt;</button>
+				<button class="nxt-btn" id="next-btn" aria-label="Next Post">&gt;</button>
 			</section>
 
 			<!-- Thumbnail Grid Section -->
-			<section id="thumbnail-grid" class="grid" aria-label="Recent Posts">
+			<section id="thumbnail-grid" class="thumbnail-grid" aria-label="Recent Posts">
 				<!-- Thumbnails will be inserted here by main.js -->
 			</section>
 		</main>
 		<footer>
-			<p>&copy; 2025 My Blog App. All rights reserved.</p>
+			<p>&copy; 2025 My Blog App.</p>
 		</footer>
 	</body>
 </html>

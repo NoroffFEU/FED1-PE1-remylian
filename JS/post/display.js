@@ -1,7 +1,10 @@
 import { apiRequest } from '../api.js';
 import { handleError } from '../errorhandling.js';
+import { navByUserStatus } from '../userStatus.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
+	navByUserStatus();
+
 	const errorContainer = document.getElementById('post-error-message');
 
 	try {

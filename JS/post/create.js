@@ -1,7 +1,10 @@
 import { apiRequest } from '../api.js';
 import { withErrorHandling } from '../errorhandling.js';
+import { displayUserStatus } from '../userStatus.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+	displayUserStatus();
+
 	const postForm = document.getElementById('post-form');
 	const errorMessageDiv = document.getElementById('error-message');
 	const successMessageDiv = document.getElementById('success-message');

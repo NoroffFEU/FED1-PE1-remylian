@@ -1,8 +1,11 @@
 import { apiRequest } from './api.js';
 import { initCarousel } from './carousel.js';
 import { handleError } from './errorhandling.js';
+import { navByUserStatus } from './userStatus.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
+	navByUserStatus();
+
 	try {
 		const username = localStorage.getItem('username') || 'MainUser';
 		const response = await apiRequest(`/blog/posts/${username}`);
@@ -30,7 +33,7 @@ function createThumbnail(post) {
 	const thumb = document.createElement('div');
 	thumb.classList.add('thumbnail');
 	thumb.innerHTML = `
-    <img src="${post.media?.url || ''}" alt="${post.media?.alt || post.title}" />
+    <img class="thumb-img" src="${post.media?.url || ''}" alt="${post.media?.alt || post.title}" />
     <h2>${post.title}</h2>
   `;
 	// Pass the username (from the post author)
@@ -40,25 +43,3 @@ function createThumbnail(post) {
 	});
 	return thumb;
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-	// Select the admin nav container
-	const adminNav = document.getElementById('admin-nav');
-
-	// Retrieve the username from localStorage
-	const username = localStorage.getItem('username');
-	console.log('Username from localStorage:', username); // Debug log
-
-	// Check if a user is logged in (username exists)
-	if (username) {
-		// Create the "Create New Post" link element
-		const createPostLink = document.createElement('a');
-		// Append the username as a query parameter (if needed) so the create page knows who's logged in
-		createPostLink.href = `/post/create-post.html?username=${encodeURIComponent(username)}`;
-		createPostLink.textContent = 'Create New Post';
-		createPostLink.classList.add('create-post-button'); // Optional: add a CSS class for styling
-
-		// Append the new link to the admin navigation container
-		adminNav.appendChild(createPostLink);
-	}
-});
