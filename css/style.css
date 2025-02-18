@@ -1,7 +1,10 @@
 @import url(./partials/reset.css);
+@import url(./partials/variables.css);
+@import url(./partials/header.css);
 
-h1 {
-	text-align: center;
+header {
+	/* background-color: var(--bg-color); */
+	background-color: rgb(82, 63, 13);
 }
 
 form {
@@ -12,18 +15,13 @@ form {
 	color: rgb(155, 199, 238);
 }
 body {
-	/* background-color: black;
+	/* background-color: rosybrown;
 	color: aliceblue; */
-}
-
-.user-status {
-	display: flex;
-	justify-content: end;
 }
 
 ul {
 	list-style: none;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 }
 
 .logout-button {
@@ -34,15 +32,16 @@ ul {
 	color: red;
 }
 
-.header-nav ul {
+/* .header-nav ul {
 	border: 1px solid black;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	list-style: none;
-}
+} */
 
-.nav-all li {
-	padding-right: 1rem;
+.header-nav-item,
+.header-nav a {
+	color: var(--text-color);
 }
 
 .nav-admin {
@@ -51,6 +50,7 @@ ul {
 }
 
 .carousel {
+	/* border: 2px solid red; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -69,10 +69,28 @@ ul {
 }
 
 .thumbnail-grid {
-	border: 1px solid black;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax (30rem, 1fr));
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
+
 .thumbnail img {
-	max-width: 10rem;
+	max-width: 100%;
+	max-height: 15rem;
+	object-fit: contain;
+}
+
+.post-container {
+	text-align: center;
+	border: 2px solid black;
+}
+
+.post-container img {
+	max-width: 100%;
+	max-height: 20rem;
+}
+
+.button-container {
+	display: flex;
+	justify-content: space-around;
 }

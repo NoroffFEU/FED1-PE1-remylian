@@ -1,9 +1,11 @@
 import { apiRequest } from '../api.js';
 import { handleError } from '../errorhandling.js';
 import { navByUserStatus } from '../userStatus.js';
+import { initShareButton } from '../share.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
 	navByUserStatus();
+	initShareButton();
 
 	const errorContainer = document.getElementById('post-error-message');
 
@@ -39,7 +41,7 @@ function renderPost(post) {
 	postContainer.innerHTML = '';
 
 	// Create and append the post title.
-	const titleElem = document.createElement('h1');
+	const titleElem = document.createElement('h2');
 	titleElem.textContent = post.title;
 	postContainer.appendChild(titleElem);
 

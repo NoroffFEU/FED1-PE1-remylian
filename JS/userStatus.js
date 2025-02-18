@@ -6,17 +6,17 @@ export function navByUserStatus() {
 
 	let navHTML = `
 	<ul class="header-nav-items">
-		<li class="header-nav-item-home"><a href="/index.html">Home</a></li>`;
+		<li class="header-nav-item-home"><img src=></img><a href="/index.html">Home icon</a></li>`;
 
 	if (username) {
 		navHTML += `
-		<li class="header-nav-item"><a href="/post/create-post.html?username=${encodeURIComponent(username)}">Create New Post</a></li>
-		<li class="header-nav-item"><span>Welcome, ${username}!</span></li>
-		<li class="header-nav-item"><button id="logout-button">Log Out</button></li>`;
+		<li class="header-nav-item"><a href="/post/create.html?username=${encodeURIComponent(username)}">Create New Post</a></li>
+		<li class="header-nav-item"><span>${username} is logged in</span><button class="header-nav-item-logout" id="logout-button">Log Out</button></li>
+		`;
 	} else {
 		navHTML += `
-		<li class="header-nav-item"><a href="/account/register.html">Register</a></li>
-		<li class="header-nav-item"><a href="/account/login.html">Log In</a></li>`;
+		<li class="header-nav-guest"><a href="/account/register.html">Register</a></li>
+		<li class="header-nav-guest"><a href="/account/login.html">Log In</a></li>`;
 	}
 
 	navHTML += `</ul>`;

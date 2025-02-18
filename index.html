@@ -3,21 +3,32 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Blog Feed - My Blog App</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Oldenburg&family=Peralta&display=swap" rel="stylesheet" />
+		<title>Blog Feed</title>
 		<link rel="stylesheet" href="/css/style.css" />
 		<script type="module" defer src="/JS/main.js"></script>
 	</head>
 	<body>
 		<header>
-			<h1>My Blog App</h1>
-
+			<section class="site-logo">
+				<h1>The Adventurer's Alehouse</h1>
+				<a class="logo-img" href="/index.html">
+					<div class="logo-wrapper">
+						<img src="/img/logo.svg" alt="site logo" />
+					</a>
+				</div>
+				<h2>-Tell us your story</h2>
+			</section>
 			<!-- Container for conditional rendering of nav-items -->
 			<nav class="header-nav" id="header-nav"></nav>
+			
 		</header>
 		<main>
 			<!-- Error container for displaying feed errors -->
 			<div id="feed-error-message" class="feed-errormsg"></div>
-
+			
 			<!-- Carousel Section -->
 			<section id="banner-carousel" class="carousel" aria-label="Featured Posts">
 				<button class="prev-btn" id="prev-btn" aria-label="Previous Post">&lt;</button>

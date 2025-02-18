@@ -1,8 +1,15 @@
 :root {
 	/* colors: */
 
-	/* --primary-color:
-  --secondary-color:
-  --text-color: 
-  --bg-color:  */
+	--primary-color: #a9714b;
+	/* --secondary-color: */
+	--text-color: #ede1cc;
+	--bg-color: #262d32;
+
+	/* Fonts:  */
+
+	--headline: 'Peralta', serif;
+	--body-text: 'Oldenburg', serif;
+
+	/* font-sizes: */
 }

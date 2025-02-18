@@ -1,0 +1,41 @@
+.site-logo {
+	/* border: 2px solid yellow; */
+	display: flex;
+	justify-content: center;
+}
+
+.site-logo img {
+	width: 100%;
+	height: 5rem;
+}
+
+h1 {
+	/* border: 2px solid green; */
+	font-family: var(--body-text);
+	color: var(--text-color);
+	/* align-self: self-end; */
+	margin: 0;
+	font-size: 24px;
+	padding-right: 1rem;
+}
+
+h2 {
+	color: var(--text-color);
+	margin-top: 0;
+	padding-left: 1rem;
+	align-self: self-end;
+}
+
+.header-nav-items {
+	display: flex;
+	justify-content: space-between;
+	font-family: var(--body-text);
+	/* padding-block: 1rem; */
+}
+
+/* .header-nav {
+	padding-top: 1rem;
+	background-color: var(--bg-color);
+	display: flex;
+
+} */
