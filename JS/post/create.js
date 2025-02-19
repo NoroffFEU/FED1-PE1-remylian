@@ -1,9 +1,9 @@
 import { apiRequest } from '../api.js';
 import { withErrorHandling } from '../errorhandling.js';
-import { displayUserStatus } from '../userStatus.js';
+import { navByUserStatus } from '../userStatus.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-	displayUserStatus();
+	navByUserStatus();
 
 	const postForm = document.getElementById('post-form');
 	const errorMessageDiv = document.getElementById('error-message');

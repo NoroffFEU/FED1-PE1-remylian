@@ -51,6 +51,7 @@ ul {
 
 .carousel {
 	/* border: 2px solid red; */
+	padding-top: 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -65,7 +66,8 @@ ul {
 }
 
 .carousel img {
-	max-width: 30rem;
+	max-width: 100%;
+	max-height: 20rem;
 }
 
 .thumbnail-grid {

@@ -2,6 +2,7 @@
 	/* border: 2px solid yellow; */
 	display: flex;
 	justify-content: center;
+	background-color: var(--bg-color);
 }
 
 .site-logo img {
@@ -10,10 +11,8 @@
 }
 
 h1 {
-	/* border: 2px solid green; */
 	font-family: var(--body-text);
 	color: var(--text-color);
-	/* align-self: self-end; */
 	margin: 0;
 	font-size: 24px;
 	padding-right: 1rem;
@@ -26,16 +25,27 @@ h2 {
 	align-self: self-end;
 }
 
-.header-nav-items {
+.header-nav {
 	display: flex;
 	justify-content: space-between;
-	font-family: var(--body-text);
-	/* padding-block: 1rem; */
 }
 
-/* .header-nav {
-	padding-top: 1rem;
-	background-color: var(--bg-color);
+.header-nav-items {
 	display: flex;
+	justify-content: flex-end;
+	font-family: var(--body-text);
+	gap: 1rem;
+}
 
-} */
+.header-nav-item-admin {
+	padding-right: 5rem;
+}
+
+.header-nav-item-logout {
+	text-align: center;
+}
+
+.thumbnail-grid {
+	border: 2px solid black;
+	padding-block: 2rem;
+}
