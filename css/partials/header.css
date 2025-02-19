@@ -20,6 +20,7 @@ h2 {
 	display: flex;
 	justify-content: center;
 	background-color: var(--bg-color);
+	/* margin-top: 2rem; */
 }
 
 .site-logo img {
@@ -59,10 +60,6 @@ a:visited {
 	gap: 3rem;
 	padding-inline-start: 0;
 	/* padding: 1rem; */
-}
-
-.header-nav-guest {
-	/* border: 2px solid red; */
 }
 
 .header-nav-items {

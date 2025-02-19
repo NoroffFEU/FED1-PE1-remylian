@@ -17,12 +17,20 @@ export function initCarousel(posts) {
 		const post = posts[index];
 		// Build the carousel item HTML.
 		carouselContainer.innerHTML = `
-		<div class="carousel-item">
+		<div class="carousel-item fade">
 		<h2 class="carousel-title">${post.title}</h2>
 		<img class="carousel-image" src="${post.media?.url || ''}" alt="${post.media?.alt || post.title}" />
-		</div>
 		<button class="carousel-read-more">Read More</button>
+		</div>
     `;
+
+		// Remove the fade class shortly after rendering to trigger the fade-in.
+		const item = carouselContainer.querySelector('.carousel-item');
+		setTimeout(() => {
+			if (item) {
+				item.classList.remove('fade');
+			}
+		}, 10);
 
 		// Attach a click event listener to the "Read More" button.
 		const readMoreButton = carouselContainer.querySelector('.carousel-read-more');
@@ -38,24 +46,36 @@ export function initCarousel(posts) {
 	renderPost(currentIndex);
 
 	// Set up event listeners for navigation buttons.
-	const prevButton = document.getElementById('prev-btn');
 	const nextButton = document.getElementById('next-btn');
-
-	if (prevButton) {
-		prevButton.addEventListener('click', () => {
-			currentIndex = (currentIndex - 1 + posts.length) % posts.length;
-			renderPost(currentIndex);
-		});
-	} else {
-		console.warn('Previous button not found.');
-	}
-
 	if (nextButton) {
 		nextButton.addEventListener('click', () => {
-			currentIndex = (currentIndex + 1) % posts.length;
-			renderPost(currentIndex);
+			// fade out current post
+			const item = carouselContainer.querySelector('.carousel-item');
+			if (item) {
+				item.classList.add('fade');
+			}
+			setTimeout(() => {
+				currentIndex = (currentIndex + 1) % posts.length;
+				renderPost(currentIndex);
+			}, 600);
 		});
 	} else {
-		console.warn('Next button not found.');
+		console.warn('No next button found');
+	}
+
+	const prevButton = document.getElementById('prev-btn');
+	if (prevButton) {
+		prevButton.addEventListener('click', () => {
+			const item = carouselContainer.querySelector('.carousel-item');
+			if (item) {
+				item.classList.add('fade');
+			}
+			setTimeout(() => {
+				currentIndex = (currentIndex - 1 + posts.length) % posts.length;
+				renderPost(currentIndex);
+			}, 600);
+		});
+	} else {
+		console.warn('No previous button found');
 	}
 }

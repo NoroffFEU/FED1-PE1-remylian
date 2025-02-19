@@ -2,9 +2,7 @@
 @import url(./partials/variables.css);
 @import url(./partials/header.css);
 @import url(./partials/feed.css);
-
-body {
-}
+@import url(./partials/carousel.css);
 
 form {
 	display: flex;
@@ -24,15 +22,6 @@ ul {
 
 .feed-errormsg {
 	color: red;
-}
-
-.carousel {
-	/* border: 2px solid red; */
-	padding-top: 2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
 }
 
 .thumbnail-grid {
