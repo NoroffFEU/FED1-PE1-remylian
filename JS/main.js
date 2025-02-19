@@ -33,7 +33,7 @@ function createThumbnail(post) {
 	const thumb = document.createElement('div');
 	thumb.classList.add('thumbnail');
 	thumb.innerHTML = `<img class="thumb-img" src="${post.media?.url || ''}" alt="${post.media?.alt || post.title}" />
-    <h2>${post.title}</h2>
+    <h2 class="thumb-title">${post.title}</h2>
   `;
 	// Pass the username (from the post author)
 	thumb.addEventListener('click', () => {

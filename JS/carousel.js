@@ -17,11 +17,11 @@ export function initCarousel(posts) {
 		const post = posts[index];
 		// Build the carousel item HTML.
 		carouselContainer.innerHTML = `
-			<button class="carousel-read-more">Read More</button>
-      <div class="carousel-item">
-			<img src="${post.media?.url || ''}" alt="${post.media?.alt || post.title}" />
-			<h2>${post.title}</h2>
-      </div>
+		<div class="carousel-item">
+		<h2 class="carousel-title">${post.title}</h2>
+		<img class="carousel-image" src="${post.media?.url || ''}" alt="${post.media?.alt || post.title}" />
+		</div>
+		<button class="carousel-read-more">Read More</button>
     `;
 
 		// Attach a click event listener to the "Read More" button.

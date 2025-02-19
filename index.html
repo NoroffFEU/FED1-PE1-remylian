@@ -14,30 +14,36 @@
 		<header>
 			<!-- Container for conditional rendering of nav-items -->
 			<nav class="header-nav" id="header-nav"></nav>
-			
 		</header>
 		<main>
 			<!-- Error container for displaying feed errors -->
 			<div id="feed-error-message" class="feed-errormsg"></div>
-			
+
 			<!-- Carousel Section -->
 			<section id="banner-carousel" class="carousel" aria-label="Featured Posts">
-				<button class="prev-btn" id="prev-btn" aria-label="Previous Post">&lt;</button>
+				<button class="carousel-prev-btn" id="prev-btn" aria-label="Previous Post">
+					<img class="prev-img" src="/img/memory_arrow-left-bold.svg" alt="previous item" />
+				</button>
 				<div id="carousel-container" class="carousel-container">
 					<!-- Carousel items will be inserted here by main.js -->
 				</div>
-				<button class="nxt-btn" id="next-btn" aria-label="Next Post">&gt;</button>
+				<button class="carousel-next-btn" id="next-btn" aria-label="Next Post">
+					<img class="next-img" src="/img/memory_arrow-right-bold.svg" alt="next item" />
+				</button>
 			</section>
-			
+
+			<!-- the site name and logo -->
 			<section class="site-logo">
-				<h1>The Adventurer's Alehouse</h1>
-				<a class="logo-img" href="/index.html">
-					<div class="logo-wrapper">
+				<h2>The Adventurer's Alehouse</h2>
+				<div class="logo-wrapper">
+					<a class="logo-img" href="/index.html">
 						<img src="/img/logo.svg" alt="site logo" />
 					</a>
 				</div>
-				<h2>-Tell us your story</h2>
+				<p>-Tell us your story</p>
 			</section>
+			<h1>Storyboard:</h1>
+
 			<!-- Thumbnail Grid Section -->
 			<section id="thumbnail-grid" class="thumbnail-grid" aria-label="Recent Posts">
 				<!-- Thumbnails will be inserted here by main.js -->
