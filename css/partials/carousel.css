@@ -1,41 +1,36 @@
 .carousel {
 	padding-block: 1rem;
-	background-color: #d3d0cb;
-	max-width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	max-width: 100%;
+	background-color: var(--bg-color);
 	text-align: center;
 }
 
 .carousel-container {
 	position: relative;
-	width: 30rem;
-	height: 100%;
 	overflow: hidden;
+	max-width: 30rem;
+	max-height: 100%;
 }
 
 .carousel-item {
 	/* border: 1px solid black; */
+	/* width: 100%; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100%;
-	/* width: 100%; */
 	opacity: 1;
+	height: 100%;
 	transition: opacity 0.6s ease;
 }
 
 .carousel-item img {
+	border-radius: 0.5rem 0.5rem 0 0;
+	object-fit: cover;
 	max-width: 100%;
 	max-height: 100%;
-	object-fit: cover;
-}
-.carousel-image {
-	border-radius: 0.5rem 0.5rem 0 0;
-	max-width: 100%rem;
-
-	object-fit: cover;
 }
 
 .carousel-item h2 {
@@ -48,22 +43,34 @@
 }
 
 .carousel-title {
-	color: var(--bg-color);
 	padding-block: 0.5rem;
+	color: var(--primary-color);
 }
 
 .carousel-read-more {
+	/* box-shadow: 2px 2px 2px #393e41; */
 	padding: 0.5rem 1rem;
 	border-radius: 0 0 0.5rem 0.5rem;
-	/* box-shadow: 2px 2px 2px #393e41; */
+	cursor: pointer;
+	font-family: var(--body-text);
+	font-size: large;
 }
 
 .carousel-prev-btn,
 .carousel-next-btn {
-	/* padding: 1rem; */
-	border-radius: 4px;
+	/* padding: 0.5rem; */
+	max-width: 100%;
+	max-height: 4rem;
 	margin-right: 1rem;
 	margin-left: 1rem;
-	max-height: 4rem;
-	max-width: 100%;
+	border-radius: 4px;
+}
+
+.carousel-next-btn:hover {
+	box-shadow: 1px 1px 3px #5d5f71;
+}
+
+.carousel-prev-btn:hover {
+	box-shadow: -1px 1px 3px #5d5f71;
+	transition: 0.15s;
 }

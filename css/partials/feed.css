@@ -1,14 +1,53 @@
 h3 {
+	font-family: var(--body-text);
 	text-align: center;
 	font-size: 32px;
 	margin-bottom: 0;
 }
 
+h4 {
+	/* border: 1px solid red; */
+	text-align: center;
+	font-family: var(--body-text);
+	font-size: 1.5rem;
+}
+
+.thumbnail-grid {
+	/* outline: 2px solid green; */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	justify-content: center;
+	gap: 3rem;
+	margin-left: 5rem;
+	margin-right: 5rem;
+}
 .thumbnail {
-	border: 2px solid rgb(145, 122, 172);
+	background-color: #686161;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	max-width: 100%;
+	flex-direction: column;
+	box-shadow: 2px 1px 4px var(--secondary-color);
+	/* padding-block: 2rem; */
+}
+
+.thumbnail:hover {
+	cursor: pointer;
+	box-shadow: 4px 2px 4px var(--secondary-color);
+
+	transition: 0.5s;
 }
 
 .thumb-title {
-	color: var(--bg-color);
-	text-align: center;
+	color: var(--text-color);
+	/* align-items: center; */
+	justify-self: center;
+}
+
+.thumbnail img {
+	border-radius: 0.5rem 0.5rem 0 0;
+	max-width: 100%;
+	max-height: 20rem;
+	object-fit: cover;
 }

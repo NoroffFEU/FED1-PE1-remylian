@@ -41,7 +41,7 @@ function renderPost(post) {
 	postContainer.innerHTML = '';
 
 	// Create and append the post title.
-	const titleElem = document.createElement('h2');
+	const titleElem = document.createElement('h1');
 	titleElem.textContent = post.title;
 	postContainer.appendChild(titleElem);
 

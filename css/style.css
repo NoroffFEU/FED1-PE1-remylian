@@ -3,6 +3,28 @@
 @import url(./partials/header.css);
 @import url(./partials/feed.css);
 @import url(./partials/carousel.css);
+@import url(./partials/post-details.css);
+
+h1 {
+	font-family: var(--body-text);
+	color: var(--primary-color);
+	text-align: center;
+	margin: 0;
+	padding-top: 1rem;
+	background-color: #d3d0cb;
+}
+
+h2 {
+	font-family: var(--body-text);
+	color: var(--text-color);
+	margin: 0;
+	font-size: 24px;
+	padding-right: 1rem;
+}
+
+body {
+	background-color: var(--bg-color);
+}
 
 form {
 	display: flex;
@@ -16,38 +38,33 @@ ul {
 	/* border: 1px solid black; */
 }
 
+a {
+	text-decoration: none;
+	font-family: var(--body-text);
+}
+
+footer {
+	margin: 0;
+	background-color: var(--primary-color);
+}
+
+footer p {
+	margin: 0;
+	text-align: center;
+	color: var(--text-color);
+	padding-block: 1rem;
+}
+
+.footer-logo {
+	display: flex;
+	justify-content: center;
+}
+
 .logout-button {
 	margin-left: 1rem;
 }
 
-.feed-errormsg {
+.feed-errormsg,
+.post-error-msg {
 	color: red;
-}
-
-.thumbnail-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-	gap: 3rem;
-	margin-left: 5rem;
-	margin-right: 5rem;
-}
-
-.thumbnail img {
-	max-width: 100%;
-	max-height: 20rem;
-}
-
-.post-container {
-	text-align: center;
-	border: 2px solid black;
-}
-
-.post-container img {
-	max-width: 100%;
-	max-height: 20rem;
-}
-
-.button-container {
-	display: flex;
-	justify-content: space-around;
 }

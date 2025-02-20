@@ -1,25 +1,9 @@
-h1 {
-	font-family: var(--body-text);
-	color: var(--bg-color);
-	text-align: center;
-	margin: 0;
-	padding-top: 1rem;
-	/* background-color: #d3d0cb; */
-}
-
-h2 {
-	font-family: var(--body-text);
-	color: var(--text-color);
-	margin: 0;
-	font-size: 24px;
-	padding-right: 1rem;
-}
-
 .site-logo {
 	/* border: 2px solid yellow; */
 	display: flex;
 	justify-content: center;
-	background-color: var(--bg-color);
+	background-color: var(--primary-color);
+	box-shadow: 0 3px 5px var(--secondary-color);
 	/* margin-top: 2rem; */
 }
 
@@ -38,7 +22,7 @@ h2 {
 }
 
 .header-nav {
-	background-color: var(--bg-color);
+	background-color: var(--primary-color);
 	display: flex;
 	justify-content: space-between;
 	color: var(--text-color);
@@ -53,10 +37,10 @@ a:visited {
 }
 
 .header-nav-guests {
-	/* border: 2px solid blue; */
+	/* border: 5px solid blue; */
 	display: flex;
 	justify-content: space-between;
-	padding-right: 5rem;
+	padding-right: 3rem;
 	gap: 3rem;
 	padding-inline-start: 0;
 	/* padding: 1rem; */
@@ -67,10 +51,11 @@ a:visited {
 	justify-content: flex-end;
 	font-family: var(--body-text);
 	gap: 1rem;
+	/* margin: 0; */
 }
 
 .header-nav-item-admin {
-	padding-right: 5rem;
+	/* padding-right: 5rem; */
 	color: var(--text-color);
 	justify-items: end;
 }

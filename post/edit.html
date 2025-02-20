@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Oldenburg&family=Peralta&display=swap" rel="stylesheet" />
 		<title>Create/Edit Post - My Blog App</title>
 		<link rel="stylesheet" href="../css/style.css" />
 		<!-- Load the post creation/edit script -->
@@ -23,15 +26,15 @@
 					<label for="title">Title (required):</label>
 					<input type="text" id="title" name="title" required />
 
-					<label for="body">Content:</label>
-					<textarea id="body" name="body"></textarea>
-
 					<label for="mediaUrl">Image URL:</label>
 					<input type="url" id="mediaUrl" name="mediaUrl" />
-
+					
 					<label for="mediaAlt">Image Alt Text:</label>
 					<input type="text" id="mediaAlt" name="mediaAlt" />
-
+					
+					<label for="body">Your Story:</label>
+					<textarea id="body" name="body"></textarea>
+					
 					<button type="submit">Save Post</button>
 				</form>
 				<!-- Delete button outside the form element to avoid submitting the form -->

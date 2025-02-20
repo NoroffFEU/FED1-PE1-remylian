@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Oldenburg&family=Peralta&display=swap" rel="stylesheet" />
 		<title>View Post - My Blog App</title>
 		<link rel="stylesheet" href="../css/style.css" />
 		<script type="module" defer src="../JS/post/display.js"></script>
@@ -10,25 +13,29 @@
 	<body>
 		<header>
 			<header>
-				<h1>My Blog App</h1>
-				
 				<!-- Container for conditional rendering of nav-items -->
 				<nav class="header-nav" id="header-nav">				
 				</nav>
-			<!-- Navigation links -->
-		</header>
-
-		<main>
+			</header>
+			
+			<main>
 			<!-- husk å flytte styling -->
-			<div id="post-error-message" style="color: red"></div>
+			<div class="post-error-msg" id="post-error-message"></div>
+
+			<div share-btn-wrapper>
+				<button class="share-button" id="share-button">share icon</button>
+			</div>
 
 			<div class="post-container" id="post-content"></div>
 			
-			<button class="share-button" id="share-button">share icon</button>
 		</main>
-
+		
 		<footer>
 			<!-- Footer content -->
+			<div class="footer-logo">	
+				<img src="/img/logo.svg" alt="site logo">
+			</div>
+			<p>&copy; 2025 the Adventurer's Alehouse</p>
 		</footer>
 	</body>
 </html>
