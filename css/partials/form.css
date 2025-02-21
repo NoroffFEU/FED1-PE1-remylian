@@ -13,31 +13,34 @@ form input {
 	margin-top: 4px;
 }
 
-fieldset{
-  border:none;
-  display: flex;
-  flex-direction: column;
+fieldset {
+	border: none;
+	display: flex;
+	flex-direction: column;
 }
 
-.post-form {
-  display: flex;
-  gap: 10rem;
-  flex-wrap: wrap;
-  max-width: 100%;
+.post-form,
+.edit-form {
+	display: flex;
+	gap: 10rem;
+	flex-wrap: wrap;
+	max-width: 100%;
 }
 
-.post-content{
-  width: 100%;
-  max-width: 37.5rem;
-  min-width: 15rem;
-  height: auto;
-  min-height: 10rem;
-  height: fit-content;
+.post-content,
+.edit-content {
+	width: 100%;
+	max-width: 37.5rem;
+	min-width: 15rem;
+	height: auto;
+	min-height: 10rem;
+	height: fit-content;
 }
 
-.form-headline {
-  padding-top
-}
+/* .form-headline { */
+/* sett padding når vi adder position:fixed til header */
+/* padding-top: 75px; */
+/* } */
 
 .hero-banner {
 	text-align: center;
@@ -52,16 +55,16 @@ fieldset{
 	object-fit: cover;
 }
 
-.form-title, 
+.form-title,
 .form-headline {
 	color: var(--primary-color);
 	text-align: center;
 	padding-top: 2rem;
 }
 
-  form label {
+form label {
 	margin-top: 4px;
-  padding-top: 1rem;
+	padding-top: 1rem;
 	font-family: var(--body-text);
 }
 
@@ -70,7 +73,7 @@ form button {
 	margin-top: 2rem;
 	font-family: var(--body-text);
 	border-radius: 0.25rem;
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 	transition: 0.1s;
 }
 
@@ -84,14 +87,19 @@ form button:active {
 	transition: 0.1s;
 }
 
-.form-msg{
-  font-size: 1.5rem;
-  text-align: center;
-  padding-block: 1rem;
+.form-msg {
+	font-size: 1.5rem;
+	text-align: center;
+	padding-block: 1rem;
 }
 
+.register-form {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 5rem;
+}
 
-
-.successmsg{
-  color:green;
+.successmsg {
+	color: green;
 }

@@ -13,14 +13,31 @@
 	</head>
 	<body>
 		<header>
-			<!-- Container for conditional rendering of nav-items -->
+			<!-- desktop nav container -->
 			<nav class="header-nav" id="header-nav"></nav>
 		</header>
 
 		<main>
-			<div class="post-edit-container">
-				<h1>Edit Story</h1>
-				<form id="post-form" novalidate>
+			<h1 class="form-headline">Edit Story</h1>
+
+			<div class="hero-banner">
+				<img src="/img/edit 1.png" alt="an adventurer sharing his exploits with the tavern guests." />
+			</div>
+
+			<section class="site-logo">
+				<h2>The Adventurer's Alehouse</h2>
+				<div class="logo-wrapper">
+					<a class="logo-img" href="/index.html">
+						<img src="/img/logo.svg" alt="site logo" />
+					</a>
+				</div>
+				<p>-Tell us your story</p>
+			</section>
+
+			<h2 class="form-title">Recount Your Tale</h2>
+
+			<form class="edit-form" id="post-form" novalidate>
+				<fieldset>
 					<label for="title">Title (required):</label>
 					<input type="text" id="title" name="title" required />
 
@@ -29,18 +46,20 @@
 
 					<label for="mediaAlt">Image Alt Text:</label>
 					<input type="text" id="mediaAlt" name="mediaAlt" />
+				</fieldset>
 
+				<fieldset>
 					<label for="body">Your Story:</label>
-					<textarea id="body" name="body"></textarea>
+					<textarea class="edit-content" id="body" name="body"></textarea>
 
 					<button type="submit">Save Post</button>
-				</form>
-				<!-- Delete button outside the form element to avoid submitting the form -->
-				<button id="delete-button" type="button">Delete Post</button>
+				</fieldset>
+			</form>
+			<!-- Delete button outside the form element to avoid submitting the form -->
+			<button id="delete-button" type="button">Delete Post</button>
 
-				<div id="error-message" style="color: red"></div>
-				<div id="success-message" style="color: green"></div>
-			</div>
+			<div class="errormsg" id="error-message"></div>
+			<div class="successmsg" id="success-message"></div>
 		</main>
 
 		<footer>

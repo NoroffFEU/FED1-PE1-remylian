@@ -43,7 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			const token = localStorage.getItem('authToken');
 			const response = await apiRequest(`/blog/posts/${username}`, 'POST', payload, token);
 
-			console.log('Post created successfully:', response);
+			console.log(response);
+
+			console.log('Post created successfully:', JSON.stringify(response));
 			successMessageDiv.textContent = 'Post published successfully!';
 
 			// collect post ID from response
@@ -51,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Redirect to post details
 			setTimeout(() => {
-				window.location.href = `../post/index.html?id=${newPostId}`;
+				window.location.href = `../post/index.html?username=${username}&id=${newPostId}`;
 			}, 1500);
 		}, errorMessageDiv)
 	);

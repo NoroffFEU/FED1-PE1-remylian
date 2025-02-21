@@ -78,3 +78,9 @@ footer p {
 .errormsg {
 	color: red;
 }
+
+/* @media (min-width: 768px) {
+	.hamburger-menu {
+		display: none;
+	}
+} */

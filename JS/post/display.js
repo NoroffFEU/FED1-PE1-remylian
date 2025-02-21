@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 		// Call API to get the specific post.
 		const response = await apiRequest(`/blog/posts/${username}/${postId}`);
+
 		// Pass the post data (response.data) to the render function.
 		renderPost(response.data);
 	} catch (error) {

@@ -11,9 +11,11 @@
 		<script type="module" defer src="../JS/auth/register.js"></script>
 	</head>
 	<body>
+		
 		<header>
-			<!-- Container for conditional rendering of nav-items -->
+			<!-- desktop nav container -->
 			<nav class="header-nav" id="header-nav"></nav>
+
 		</header>
 		
 		
@@ -37,21 +39,28 @@
 
 				<h2 class="form-title">Register on the Guestlist</h2>			
 				<form class="register-form" id="register-form" novalidate>
-					<fieldset>
-					<label for="name">Name:</label>
-					<input type="text" name="name" id="name" placeholder="Your Username" required />
+					
+					<fieldset class="reg-info">
+						<label for="name">Name:</label>
+						<input type="text" name="name" id="name" placeholder="Your Username" required />
 
-					<label for="email">Email:</label>
-					<input type="email" name="email" id="email" placeholder="name@stud.noroff.no" required />
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="name@stud.noroff.no" required />
+					</fieldset>
+					
+					<fieldset class="reg-pass">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" minlength="8" placeholder="min. 8 characters" required />
 
-					<label for="password">Password</label>
-					<input type="password" name="password" id="password" minlength="8" placeholder="min. 8 characters" required />
-
-					<label for="confirmPassword">Confirm Password:</label>
-					<input type="password" name="confirmPassword" id="confirmPassword" minlength="8" required />
-					<button type="submit">Register</button>
-				</fieldset>
-				</form>
+						<label for="confirmPassword">Confirm Password:</label>
+						<input type="password" name="confirmPassword" id="confirmPassword" minlength="8" required />
+					</fieldset>
+					
+					<fieldset class="reg-button">
+						<button type="submit">Register</button>
+					</fieldset>
+				
+					</form>
 				<div class="errormsg form-msg" id="error-message"></div>
 				<div class="successmsg form-msg" id="success-message"></div>
 			</div>
