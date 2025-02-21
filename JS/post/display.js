@@ -40,6 +40,15 @@ function renderPost(post) {
 
 	postContainer.innerHTML = '';
 
+	// Create and append the image banner, if available.
+	if (post.media?.url) {
+		const imageElem = document.createElement('img');
+		imageElem.src = post.media.url;
+		imageElem.alt = post.media.alt || post.title;
+		imageElem.className = 'post-banner';
+		postContainer.appendChild(imageElem);
+	}
+
 	// Create and append the post title.
 	const titleElem = document.createElement('h1');
 	titleElem.textContent = post.title;
@@ -53,15 +62,6 @@ function renderPost(post) {
 	metaElem.textContent = `By ${post.author?.name || 'Unknown'} on ${publishedDate}`;
 	postContainer.appendChild(metaElem);
 
-	// Create and append the image banner, if available.
-	if (post.media?.url) {
-		const imageElem = document.createElement('img');
-		imageElem.src = post.media.url;
-		imageElem.alt = post.media.alt || post.title;
-		imageElem.className = 'post-banner';
-		postContainer.appendChild(imageElem);
-	}
-
 	// Create and append the post body/content.
 	const bodyElem = document.createElement('div');
 	bodyElem.className = 'post-body';
@@ -73,11 +73,12 @@ function renderPost(post) {
 	if (loggedInUsername && post.author && loggedInUsername === post.author.name) {
 		// Create a container for the buttons.
 		const buttonContainer = document.createElement('div');
-		buttonContainer.className = 'button-container';
+		buttonContainer.className = 'post-button-container';
 
 		// Create the "Edit Post" button.
 		const editButton = document.createElement('button');
-		editButton.textContent = 'Edit Post';
+		editButton.textContent = 'Edit';
+		editButton.className = 'edit-btn';
 		editButton.addEventListener('click', () => {
 			// Fix the URL (remove any duplicate .html)
 			window.location.href = `/post/edit.html?username=${encodeURIComponent(post.author.name)}&id=${post.id}`;
@@ -86,7 +87,8 @@ function renderPost(post) {
 
 		// Create the "Delete Post" button.
 		const deleteButton = document.createElement('button');
-		deleteButton.textContent = 'Delete Post';
+		deleteButton.textContent = 'Delete';
+		deleteButton.className = 'delete-btn';
 		deleteButton.addEventListener('click', async () => {
 			if (confirm('Are you sure you want to DELETE this post? This action cannot be undone!')) {
 				try {

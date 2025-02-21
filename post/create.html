@@ -12,31 +12,57 @@
 	</head>
 	<body>
 		<header>
-			<h1>Create New Post</h1>
-			<div class="user-status" id="user-status"></div>
+			<!-- Container for conditional rendering of nav-items -->
+			<nav class="header-nav" id="header-nav"></nav>
 		</header>
 
 		<main>
-			<div class="post-create-container">
-				<form id="post-form" novalidate>
-					<label for="title">Title (required):</label>
-					<input type="text" id="title" name="title" required />
+			<h1 class="form-headline">Tell Your Tale!</h1>
 
-					<label for="body">Content:</label>
-					<textarea id="body" name="body"></textarea>
+			<div class="hero-banner">
+				<img src="/img/create post 1.png" alt="an adventurer sharing his exploits with the tavern guests." />
+			</div>
+
+			<section class="site-logo">
+				<h2>The Adventurer's Alehouse</h2>
+				<div class="logo-wrapper">
+					<a class="logo-img" href="/index.html">
+						<img src="/img/logo.svg" alt="site logo" />
+					</a>
+				</div>
+				<p>-Tell us your story</p>
+			</section>
+
+			<h2 class="form-title">Record Your Story (for the Storyboard)</h2>
+
+			<form class="post-form" id="post-form" novalidate>
+				<fieldset class="post-info">
+					<label for="title">Title (required):</label>
+					<input type="text" id="title" name="title" placeholder="The title of your story" required />
 
 					<label for="mediaUrl">Image URL:</label>
-					<input type="url" id="mediaUrl" name="mediaUrl" />
+					<input type="url" id="mediaUrl" name="mediaUrl" placeholder="https://yourimageURL.com" />
 
 					<label for="mediaAlt">Image Alt Text:</label>
-					<input type="text" id="mediaAlt" name="mediaAlt" />
+					<input type="text" id="mediaAlt" name="mediaAlt" placeholder="Describe your image" />
+				</fieldset>
+
+				<fieldset class="">
+					<label for="body">Your Story:</label>
+					<textarea class="post-content" id="body" name="body" placeholder="Tell your tale here"></textarea>
 
 					<button type="submit">Publish</button>
-				</form>
-				<div id="error-message" style="color: red"></div>
-				<div id="success-message" style="color: green"></div>
-			</div>
+				</fieldset>
+			</form>
+			<div class="errormsg form-msg" id="error-message"></div>
+			<div class="successmsg form-msg" id="success-message"></div>
 		</main>
-		<footer></footer>
+
+		<footer>
+			<div class="footer-logo">
+				<img src="/img/logo.svg" alt="site logo" />
+			</div>
+			<p>&copy; 2025 the Adventurer's Alehouse</p>
+		</footer>
 	</body>
 </html>

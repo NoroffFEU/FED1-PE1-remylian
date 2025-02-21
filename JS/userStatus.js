@@ -6,7 +6,7 @@ export function navByUserStatus() {
 
 	let navHTML = `
 	<ul class="header-home">
-	<li class="header-nav-home"><img src=></img><a href="/index.html">Home</a></li>
+	<li class="header-nav-home"><a href="/index.html">Home</a></li>
 	</ul>`;
 
 	if (username) {
@@ -18,8 +18,8 @@ export function navByUserStatus() {
 	} else {
 		navHTML += `
 		<ul class="header-nav-guests">
-		<li class="header-nav-guest"><a href="/account/register.html">Register</a></li>
-		<li class="header-nav-guest"><a href="/account/login.html">Log In</a></li>`;
+		<li class="header-nav-guest nav-reg"><a href="/account/register.html">Register</a></li>
+		<li class="header-nav-guest nav-login"><a href="/account/login.html">Log In</a></li>`;
 	}
 
 	navHTML += `</ul>`;

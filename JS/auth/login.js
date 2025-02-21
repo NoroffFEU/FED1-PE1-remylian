@@ -1,9 +1,12 @@
 import { apiRequest } from '../api.js';
 import { withErrorHandling } from '../errorhandling.js';
+import { navByUserStatus } from '../userStatus.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const loginForm = document.getElementById('login-form');
 	const errorMessageDiv = document.getElementById('error-message');
+
+	navByUserStatus();
 
 	loginForm.addEventListener(
 		'submit',

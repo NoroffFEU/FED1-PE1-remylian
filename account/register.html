@@ -11,32 +11,57 @@
 		<script type="module" defer src="../JS/auth/register.js"></script>
 	</head>
 	<body>
-		<header></header>
-
+		<header>
+			<!-- Container for conditional rendering of nav-items -->
+			<nav class="header-nav" id="header-nav"></nav>
+		</header>
+		
+		
+		
 		<main>
-			<div class="register-container">
-				<h1>Register</h1>
-				<!-- HUSK Å NEVNE NOVALIDATE I RAPPORTEN!  -->
+			
+			<h1 class="form-headline">Become a Patron!</h1>
+			<div class="hero-banner">
+				<img src="/img/registration 1.png" alt="an adventurer filling out a registration form">
+			</div>
+			
+			<section class="site-logo">
+				<h2>The Adventurer's Alehouse</h2>
+				<div class="logo-wrapper">
+					<a class="logo-img" href="/index.html">
+						<img src="/img/logo.svg" alt="site logo" />
+					</a>
+				</div>
+				<p>-Tell us your story</p>
+			</section>
+
+				<h2 class="form-title">Register on the Guestlist</h2>			
 				<form class="register-form" id="register-form" novalidate>
-					<!-- Required Fields -->
+					<fieldset>
 					<label for="name">Name:</label>
-					<input type="text" name="name" id="name" required />
+					<input type="text" name="name" id="name" placeholder="Your Username" required />
 
-					<label for="email">Email (must be a stud.noroff.no email):</label>
-					<input type="email" name="email" id="email" required />
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email" placeholder="name@stud.noroff.no" required />
 
-					<label for="password">Password (min 8 characters):</label>
-					<input type="password" name="password" id="password" required />
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" minlength="8" placeholder="min. 8 characters" required />
 
 					<label for="confirmPassword">Confirm Password:</label>
-					<input type="password" name="confirmPassword" id="confirmPassword" required />
-
+					<input type="password" name="confirmPassword" id="confirmPassword" minlength="8" required />
 					<button type="submit">Register</button>
+				</fieldset>
 				</form>
-				<div id="error-message" style="color: red"></div>
-				<div id="success-message" style="color: green"></div>
+				<div class="errormsg form-msg" id="error-message"></div>
+				<div class="successmsg form-msg" id="success-message"></div>
 			</div>
 		</main>
-		<footer></footer>
+
+		<footer>
+			<div class="footer-logo">
+				<img src="/img/logo.svg" alt="site logo" />
+			</div>
+			<p>&copy; 2025 the Adventurer's Alehouse</p>
+		</footer>
 	</body>
 </html>

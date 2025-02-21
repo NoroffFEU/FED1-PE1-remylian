@@ -11,12 +11,32 @@
 		<script type="module" defer src="../JS/auth/login.js"></script>
 	</head>
 	<body>
-		<header></header>
+		<header>
+			<!-- Container for conditional rendering of nav-items -->
+			<nav class="header-nav" id="header-nav"></nav>
+		</header>
 
 		<main>
-			<div class="login-container">
-				<h1>Login</h1>
-				<form id="login-form">
+			<h1 class="form-headline">Enter The Alehouse!</h1>
+
+			<div class="hero-banner">
+				<img src="/img/Login 1.png" alt="a bouncer checking if your name is on the guestlist." />
+			</div>
+
+			<section class="site-logo">
+				<h2>The Adventurer's Alehouse</h2>
+				<div class="logo-wrapper">
+					<a class="logo-img" href="/index.html">
+						<img src="/img/logo.svg" alt="site logo" />
+					</a>
+				</div>
+				<p>-Tell us your story</p>
+			</section>
+
+			<h2 class="form-title">Are you on the Guestlist?</h2>
+
+			<form id="login-form">
+				<fieldset>
 					<label for="email">Email:</label>
 					<input type="email" name="email" id="email" required />
 
@@ -24,10 +44,16 @@
 					<input type="password" name="password" id="password" required />
 
 					<button type="submit">Login</button>
-				</form>
-				<div id="error-message" style="color: red"></div>
-			</div>
+				</fieldset>
+			</form>
+			<div class="errormsg form-msg" id="error-message"></div>
 		</main>
-		<footer></footer>
+
+		<footer>
+			<div class="footer-logo">
+				<img src="/img/logo.svg" alt="site logo" />
+			</div>
+			<p>&copy; 2025 the Adventurer's Alehouse</p>
+		</footer>
 	</body>
 </html>

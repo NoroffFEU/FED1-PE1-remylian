@@ -3,13 +3,21 @@
 
 	--primary-color: #262d32;
 	--secondary-color: #5d5f71;
+	--bg-color-2: #b7b8c0;
 	--bg-color: #d3d0cb;
 	--text-color: #e0dfd5;
 
 	/* Fonts:  */
 
-	--headline: 'Peralta', serif;
 	--body-text: 'Oldenburg', serif;
 
 	/* font-sizes: */
+
+	--font-size-plus: 1.5rem;
+
+	/* spacing */
+
+	--border-radius-full: 0.5rem;
+
+	--button-shadow: inset 2px 2px 2px #262d32;
 }

@@ -6,35 +6,33 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Oldenburg&family=Peralta&display=swap" rel="stylesheet" />
-		<title>Create/Edit Post - My Blog App</title>
+		<title>Edit Post - My Blog App</title>
 		<link rel="stylesheet" href="../css/style.css" />
 		<!-- Load the post creation/edit script -->
 		<script type="module" defer src="../JS/post/edit.js"></script>
 	</head>
 	<body>
 		<header>
-			<h1>My Blog App</h1>
-			
 			<!-- Container for conditional rendering of nav-items -->
-			<nav class="header-nav" id="header-nav">				
-			</nav>
+			<nav class="header-nav" id="header-nav"></nav>
+		</header>
 
 		<main>
 			<div class="post-edit-container">
-				<h1>Create/Edit Post</h1>
+				<h1>Edit Story</h1>
 				<form id="post-form" novalidate>
 					<label for="title">Title (required):</label>
 					<input type="text" id="title" name="title" required />
 
 					<label for="mediaUrl">Image URL:</label>
 					<input type="url" id="mediaUrl" name="mediaUrl" />
-					
+
 					<label for="mediaAlt">Image Alt Text:</label>
 					<input type="text" id="mediaAlt" name="mediaAlt" />
-					
+
 					<label for="body">Your Story:</label>
 					<textarea id="body" name="body"></textarea>
-					
+
 					<button type="submit">Save Post</button>
 				</form>
 				<!-- Delete button outside the form element to avoid submitting the form -->
@@ -44,6 +42,12 @@
 				<div id="success-message" style="color: green"></div>
 			</div>
 		</main>
-		<footer></footer>
+
+		<footer>
+			<div class="footer-logo">
+				<img src="/img/logo.svg" alt="site logo" />
+			</div>
+			<p>&copy; 2025 the Adventurer's Alehouse</p>
+		</footer>
 	</body>
 </html>

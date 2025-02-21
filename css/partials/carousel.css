@@ -1,5 +1,5 @@
 .carousel {
-	padding-block: 1rem;
+	padding-block: 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -11,13 +11,12 @@
 .carousel-container {
 	position: relative;
 	overflow: hidden;
-	max-width: 30rem;
+	width: 100%;
+	max-width: 50rem;
 	max-height: 100%;
 }
 
 .carousel-item {
-	/* border: 1px solid black; */
-	/* width: 100%; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -48,17 +47,21 @@
 }
 
 .carousel-read-more {
-	/* box-shadow: 2px 2px 2px #393e41; */
 	padding: 0.5rem 1rem;
 	border-radius: 0 0 0.5rem 0.5rem;
 	cursor: pointer;
 	font-family: var(--body-text);
 	font-size: large;
+	transition: 0.2s;
+}
+
+.carousel-read-more:hover {
+	background-color: #b7b8c0;
+	transition: 0.2s;
 }
 
 .carousel-prev-btn,
 .carousel-next-btn {
-	/* padding: 0.5rem; */
 	max-width: 100%;
 	max-height: 4rem;
 	margin-right: 1rem;
@@ -68,6 +71,7 @@
 
 .carousel-next-btn:hover {
 	box-shadow: 1px 1px 3px #5d5f71;
+	transition: 0.15s;
 }
 
 .carousel-prev-btn:hover {

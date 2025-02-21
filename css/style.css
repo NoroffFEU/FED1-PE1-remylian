@@ -4,9 +4,13 @@
 @import url(./partials/feed.css);
 @import url(./partials/carousel.css);
 @import url(./partials/post-details.css);
+@import url(./partials/form.css);
+
+img {
+	vertical-align: middle; /*removes empty space */
+}
 
 h1 {
-	font-family: var(--body-text);
 	color: var(--primary-color);
 	text-align: center;
 	margin: 0;
@@ -15,36 +19,38 @@ h1 {
 }
 
 h2 {
-	font-family: var(--body-text);
 	color: var(--text-color);
+	text-align: center;
 	margin: 0;
 	font-size: 24px;
 	padding-right: 1rem;
 }
 
-body {
-	background-color: var(--bg-color);
+h3 {
+	text-align: center;
+	font-size: 32px;
+	margin-bottom: 0;
 }
 
-form {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+h4 {
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+body {
+	background-color: var(--bg-color);
+	font-family: var(--body-text);
 }
 
 ul {
 	list-style: none;
-	/* border: 1px solid black; */
 }
 
 a {
 	text-decoration: none;
-	font-family: var(--body-text);
 }
 
 footer {
-	margin: 0;
 	background-color: var(--primary-color);
 }
 
@@ -66,5 +72,9 @@ footer p {
 
 .feed-errormsg,
 .post-error-msg {
+	color: red;
+}
+
+.errormsg {
 	color: red;
 }

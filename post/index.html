@@ -12,28 +12,26 @@
 	</head>
 	<body>
 		<header>
-			<header>
-				<!-- Container for conditional rendering of nav-items -->
-				<nav class="header-nav" id="header-nav">				
-				</nav>
-			</header>
-			
-			<main>
-			<!-- husk å flytte styling -->
-			<div class="post-error-msg" id="post-error-message"></div>
+			<!-- Container for conditional rendering of nav-items -->
+			<nav class="header-nav" id="header-nav"></nav>
 
-			<div share-btn-wrapper>
-				<button class="share-button" id="share-button">share icon</button>
+			<div class="share-button-wrapper">
+				<button class="share-button" id="share-button">
+					<img src="/img/share.svg" alt="share icon" />
+				</button>
+				<p>Share Story</p>
 			</div>
+		</header>
+
+		<main>
+			<div class="errormsg" id="post-error-message"></div>
 
 			<div class="post-container" id="post-content"></div>
-			
 		</main>
-		
+
 		<footer>
-			<!-- Footer content -->
-			<div class="footer-logo">	
-				<img src="/img/logo.svg" alt="site logo">
+			<div class="footer-logo">
+				<img src="/img/logo.svg" alt="site logo" />
 			</div>
 			<p>&copy; 2025 the Adventurer's Alehouse</p>
 		</footer>

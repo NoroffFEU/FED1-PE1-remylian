@@ -1,10 +1,13 @@
 import { apiRequest } from '../api.js';
 import { withErrorHandling } from '../errorhandling.js';
+import { navByUserStatus } from '../userStatus.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const registerForm = document.getElementById('register-form');
 	const errorMessageDiv = document.getElementById('error-message');
 	const successMessageDiv = document.getElementById('success-message');
+
+	navByUserStatus();
 
 	registerForm.addEventListener(
 		'submit',
