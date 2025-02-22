@@ -47,6 +47,7 @@ function renderPost(post) {
 		imageElem.src = post.media.url;
 		imageElem.alt = post.media.alt || post.title;
 		imageElem.className = 'post-banner';
+		imageElem.loading = 'lazy';
 		postContainer.appendChild(imageElem);
 	}
 

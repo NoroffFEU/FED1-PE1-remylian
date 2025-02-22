@@ -19,7 +19,7 @@ export function initCarousel(posts) {
 		carouselContainer.innerHTML = `
 		<div class="carousel-item fade">
 		<h2 class="carousel-title">${post.title}</h2>
-		<img class="carousel-image" src="${post.media?.url || ''}" alt="${post.media?.alt || post.title}" />
+		<img class="carousel-image" src="${post.media?.url || ''}" alt="${post.media?.alt || post.title}" loading="lazy" />
 		<button class="carousel-read-more">Read More</button>
 		</div>
     `;

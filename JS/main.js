@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 function createThumbnail(post) {
 	const thumb = document.createElement('div');
 	thumb.classList.add('thumbnail');
-	thumb.innerHTML = `<img class="thumb-img" src="${post.media?.url || ''}" alt="${post.media?.alt || post.title}" />
+	thumb.innerHTML = `<img class="thumb-img" src="${post.media?.url || ''}" alt="${post.media?.alt || post.title}" loading="lazy" />
     <h4 class="thumb-title">${post.title}</h4>
   `;
 	// Pass the username (from the post author)
