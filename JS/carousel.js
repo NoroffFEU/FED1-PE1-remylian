@@ -37,7 +37,7 @@ export function initCarousel(posts) {
 		if (readMoreButton) {
 			readMoreButton.addEventListener('click', () => {
 				const authorName = post.author?.name || localStorage.getItem('username') || 'MainUser';
-				window.location.href = `/post/index.html?username=${encodeURIComponent(authorName)}&id=${post.id}`;
+				window.location.href = `post/index.html?username=${encodeURIComponent(authorName)}&id=${post.id}`;
 			});
 		}
 	}
