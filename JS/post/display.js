@@ -1,5 +1,5 @@
 import { apiRequest } from '../api.js';
-import { handleError } from '../errorhandling.js';
+import { handleError } from '../errorHandling.js';
 import { navByUserStatus } from '../userStatus.js';
 import { initShareButton } from '../share.js';
 

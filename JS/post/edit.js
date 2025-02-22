@@ -1,5 +1,5 @@
 import { apiRequest } from '../api.js';
-import { withErrorHandling, handleError } from '../errorhandling.js';
+import { withErrorHandling, handleError } from '../errorHandling.js';
 import { navByUserStatus } from '../userStatus.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
