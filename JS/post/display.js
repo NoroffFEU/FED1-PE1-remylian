@@ -82,7 +82,7 @@ function renderPost(post) {
 		editButton.className = 'edit-btn';
 		editButton.addEventListener('click', () => {
 			// Fix the URL (remove any duplicate .html)
-			window.location.href = `/post/edit.html?username=${encodeURIComponent(post.author.name)}&id=${post.id}`;
+			window.location.href = `post/edit.html?username=${encodeURIComponent(post.author.name)}&id=${post.id}`;
 		});
 		buttonContainer.appendChild(editButton);
 
@@ -96,7 +96,7 @@ function renderPost(post) {
 					const token = localStorage.getItem('authToken');
 					await apiRequest(`/blog/posts/${post.author.name}/${post.id}`, 'DELETE', null, token);
 					alert('Post deleted successfully!');
-					window.location.href = '/index.html';
+					window.location.href = 'index.html';
 				} catch (error) {
 					alert('Error deleting post: ' + error.message);
 				}
