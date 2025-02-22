@@ -1,6 +1,6 @@
 import { apiRequest } from './api.js';
 import { initCarousel } from './carousel.js';
-import { handleError } from './errorhandling.js';
+import { handleError } from './errorHandling.js';
 import { navByUserStatus } from './userStatus.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -38,7 +38,7 @@ function createThumbnail(post) {
 	// Pass the username (from the post author)
 	thumb.addEventListener('click', () => {
 		const authorName = post.author?.name || localStorage.getItem('username') || 'MainUser';
-		window.location.href = `/post/index.html?username=${encodeURIComponent(authorName)}&id=${post.id}`;
+		window.location.href = `./post/index.html?username=${encodeURIComponent(authorName)}&id=${post.id}`;
 	});
 	return thumb;
 }
