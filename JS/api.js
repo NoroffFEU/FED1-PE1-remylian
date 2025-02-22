@@ -1,5 +1,3 @@
-//BRUK KODEN UNDER DENNE KOMMENTAREN
-
 const BASE_URL = 'https://v2.api.noroff.dev';
 
 //Function to handle API requests:
