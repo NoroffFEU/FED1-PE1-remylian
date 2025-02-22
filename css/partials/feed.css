@@ -1,7 +1,7 @@
 .thumbnail-grid {
 	/* outline: 2px solid green; */
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
 
 	justify-content: center;
 	gap: 3rem;
