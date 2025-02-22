@@ -16,8 +16,8 @@ export function navByUserStatus() {
 	if (username) {
 		navHTML += `
 	<ul class="header-nav-items">
-		<li class="header-nav-item-admin"><a href="post/create.html?username=${encodeURIComponent(username)}">Create New Post</a></li>
-		<li class="header-nav-item-admin"><div>${username} is in the Alehouse</div><button class="header-nav-item-logout" id="logout-button">Log Out</button></li>
+		<li class="header-nav-item-admin nav-create"><a href="post/create.html?username=${encodeURIComponent(username)}">Create New Post</a></li>
+		<li class="header-nav-item-admin nav-username"><div>${username} is in the Alehouse</div><button class="nav-logout" id="logout-button">Log Out</button></li>
 		`;
 	} else {
 		navHTML += `

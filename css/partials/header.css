@@ -46,11 +46,41 @@ a:visited {
 }
 
 .header-nav-guests {
-	/* border: 5px solid blue; */
 	display: flex;
 	justify-content: space-between;
 	padding-right: 3rem;
 	gap: 3rem;
+}
+
+.nav-create {
+	padding-right: 3rem;
+	border-right: 1px solid var(--text-color);
+}
+
+.nav-username {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 3rem;
+}
+
+.nav-logout {
+	/* padding-block: 0.5rem; */
+	width: fit-content;
+	font-family: var(--body-text);
+	font-size: 1.2rem;
+	border-radius: 0.25rem;
+	transition: 0.2s;
+}
+
+.nav-logout:hover {
+	background-color: var(--bg-color-2);
+	/* padding-left: 1rem; */
+	transition: 0.2s;
+}
+
+.nav-logout:active {
+	box-shadow: var(--button-shadow);
 }
 
 .nav-reg {

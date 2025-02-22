@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			// Display success message and redirect to login
 			successMessageDiv.textContent = 'Registration successful! Redirecting to log in.';
 			setTimeout(() => {
-				window.location.href = './login.html';
+				window.location.href = 'login.html';
 			}, 2500);
 		}, errorMessageDiv)
 	);
