@@ -4,7 +4,7 @@
 @import url(./partials/feed.css);
 @import url(./partials/carousel.css);
 @import url(./partials/post-details.css);
-@import url(./partials/header.css);
+@import url(./partials/form.css);
 
 img {
 	vertical-align: middle; /*removes empty space */
