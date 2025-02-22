@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			localStorage.setItem('username', userData.name);
 			console.log(userData.name);
 
-			window.location.href = '/FED-PE1-remylian/index.html';
+			window.location.href = 'index.html';
 		}, errorMessageDiv)
 	);
 });
