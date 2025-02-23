@@ -17,6 +17,11 @@
 
 	/* spacing */
 
+	--spacer-one: 1rem;
+	--spacer-two: 3rem;
+	--spacer-three: 5rem;
+	--spacer-four: 10rem;
+
 	--border-radius-full: 0.5rem;
 
 	--button-shadow: inset 2px 2px 2px #262d32;

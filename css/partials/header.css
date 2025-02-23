@@ -8,7 +8,7 @@
 
 .site-logo img {
 	width: 100%;
-	height: 5rem;
+	height: var(--spacer-three);
 }
 
 .site-logo p {
@@ -16,7 +16,7 @@
 	font-family: var(--body-text);
 	font-size: 24px;
 	margin-bottom: 0;
-	padding-left: 1rem;
+	padding-left: var(--spacer-one);
 	align-self: self-end;
 }
 
@@ -44,8 +44,8 @@ a:visited {
 	/* border: 5px solid blue; */
 	display: flex;
 	justify-content: space-between;
-	padding-right: 3rem;
-	gap: 3rem;
+	padding-right: var(--spacer-two);
+	gap: var(--spacer-two);
 }
 
 .nav-reg {
@@ -62,7 +62,7 @@ a:visited {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-right: 3rem;
+	padding-right: var(--spacer-two);
 }
 
 .nav-logout {
@@ -87,7 +87,7 @@ a:visited {
 .nav-create {
 	align-self: center;
 	text-decoration: underline;
-	padding-right: 3rem;
+	padding-right: var(--spacer-two);
 	border-right: 1px solid var(--text-color);
 }
 
@@ -96,7 +96,7 @@ a:visited {
 	font-size: large;
 	display: flex;
 	justify-content: space-between;
-	gap: 5rem;
+	gap: var(--spacer-three);
 }
 
 .header-nav-item-admin {
@@ -111,5 +111,5 @@ a:visited {
 	background-color: var(--primary-color);
 	text-decoration: none;
 	width: 100%;
-	height: 3rem;
+	height: var(--spacer-two);
 }

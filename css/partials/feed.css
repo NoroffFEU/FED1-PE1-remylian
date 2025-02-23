@@ -4,9 +4,9 @@
 	grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
 
 	justify-content: center;
-	gap: 3rem;
-	margin-left: 5rem;
-	margin-right: 5rem;
+	gap: var(--spacer-two);
+	margin-left: var(--spacer-three);
+	margin-right: var(--spacer-three);
 }
 .thumbnail {
 	background-color: #b7b8c0;

@@ -3,12 +3,12 @@ form {
 	/* flex-direction: column; */
 	justify-content: center;
 	align-items: center;
-	padding-block: 1rem;
+	padding-block: var(--spacer-one);
 }
 
 form input {
 	width: fit-content;
-	padding-block: 1rem;
+	padding-block: var(--spacer-one);
 	border-radius: 0.25rem;
 	margin-top: 4px;
 }
@@ -22,7 +22,7 @@ fieldset {
 .post-form,
 .edit-form {
 	display: flex;
-	gap: 10rem;
+	gap: var(--spacer-four);
 	flex-wrap: wrap;
 	max-width: 100%;
 }
@@ -33,13 +33,13 @@ fieldset {
 	max-width: 37.5rem;
 	min-width: 15rem;
 	height: auto;
-	min-height: 10rem;
+	min-height: var(--spacer-four);
 	height: fit-content;
 }
 
 .hero-banner {
 	text-align: center;
-	padding-block: 3rem;
+	padding-block: var(--spacer-two);
 }
 
 .hero-banner img {
@@ -59,13 +59,13 @@ fieldset {
 
 form label {
 	margin-top: 4px;
-	padding-top: 1rem;
+	padding-top: var(--spacer-one);
 	font-family: var(--body-text);
 }
 
 form button,
 .editform-delete {
-	padding: 1rem;
+	padding: var(--spacer-one);
 	margin-top: 2rem;
 	font-family: var(--body-text);
 	border-radius: 0.25rem;
@@ -88,14 +88,14 @@ form button:active,
 .form-msg {
 	font-size: 1.5rem;
 	text-align: center;
-	padding-block: 1rem;
+	padding-block: var(--spacer-one);
 }
 
 .register-form {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 5rem;
+	gap: var(--spacer-three);
 }
 .edit-form {
 	flex-direction: column;
@@ -109,7 +109,7 @@ form button:active,
 .editform-delete {
 	font-size: large;
 	width: 100%;
-	max-width: 10rem;
+	max-width: var(--spacer-four);
 	align-self: center;
-	margin-bottom: 1rem;
+	margin-bottom: var(--spacer-one);
 }

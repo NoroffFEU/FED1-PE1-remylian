@@ -14,7 +14,7 @@ h1 {
 	color: var(--primary-color);
 	text-align: center;
 	margin: 0;
-	padding-top: 1rem;
+	padding-top: var(--spacer-one);
 	background-color: #d3d0cb;
 }
 
@@ -23,7 +23,7 @@ h2 {
 	text-align: center;
 	margin: 0;
 	font-size: 1.5rem;
-	padding-right: 1rem;
+	padding-right: var(--spacer-one);
 }
 
 h3 {
@@ -59,7 +59,7 @@ footer p {
 	margin: 0;
 	text-align: center;
 	color: var(--text-color);
-	padding-block: 1rem;
+	padding-block: var(--spacer-one);
 }
 
 .footer-logo {
@@ -68,7 +68,7 @@ footer p {
 }
 
 .logout-button {
-	margin-left: 1rem;
+	margin-left: var(--spacer-one);
 }
 
 .feed-errormsg,
@@ -90,7 +90,7 @@ footer p {
 	}
 	.header-home {
 		height: 100%;
-		padding-top: 1rem;
+		padding-top: var(--spacer-one);
 		display: flex;
 		flex-direction: column;
 		justify-items: center;
@@ -104,7 +104,7 @@ footer p {
 
 	.nav-create {
 		padding-right: 2rem;
-		padding-left: 1rem;
+		padding-left: var(--spacer-one);
 		align-self: center;
 	}
 
@@ -113,7 +113,7 @@ footer p {
 	}
 
 	.nav-logout {
-		border-radius: 5rem;
+		border-radius: var(--spacer-three);
 		margin-left: 2rem;
 		padding: 0.3rem 0.8rem;
 	}
@@ -123,7 +123,7 @@ footer p {
 	}
 
 	.site-logo p {
-		font-size: 1rem;
+		font-size: var(--spacer-one);
 	}
 
 	.register-form {
