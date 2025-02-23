@@ -37,11 +37,6 @@ fieldset {
 	height: fit-content;
 }
 
-/* .form-headline { */
-/* sett padding når vi adder position:fixed til header */
-/* padding-top: 75px; */
-/* } */
-
 .hero-banner {
 	text-align: center;
 	padding-block: 3rem;
@@ -68,7 +63,8 @@ form label {
 	font-family: var(--body-text);
 }
 
-form button {
+form button,
+.editform-delete {
 	padding: 1rem;
 	margin-top: 2rem;
 	font-family: var(--body-text);
@@ -77,12 +73,14 @@ form button {
 	transition: 0.1s;
 }
 
-form button:hover {
+form button:hover,
+.editform-delete:hover {
 	background-color: var(--bg-color-2);
 	transition: 0.1s;
 }
 
-form button:active {
+form button:active,
+.editform-delete:active {
 	box-shadow: var(--button-shadow);
 	transition: 0.1s;
 }
@@ -99,7 +97,19 @@ form button:active {
 	flex-wrap: wrap;
 	gap: 5rem;
 }
-
-.successmsg {
-	color: green;
+.edit-form {
+	flex-direction: column;
+	gap: 2rem;
+}
+.editform-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.editform-delete {
+	font-size: large;
+	width: 100%;
+	max-width: 10rem;
+	align-self: center;
+	margin-bottom: 1rem;
 }

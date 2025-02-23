@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 				// Redirect to blog feed after deletion
 				setTimeout(() => {
-					window.location.href = '/index.html';
+					window.location.href = 'index.html';
 				}, 2500);
 			}, errorMessageDiv)
 		);

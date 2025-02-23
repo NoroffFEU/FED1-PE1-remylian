@@ -37,27 +37,29 @@
 
 			<h2 class="form-title">Recount Your Tale</h2>
 
-			<form class="edit-form" id="post-form" novalidate>
-				<fieldset>
-					<label for="title">Title (required):</label>
-					<input type="text" id="title" name="title" required />
+			<div class="editform-wrapper">
+				<form class="edit-form" id="post-form" novalidate>
+					<fieldset>
+						<label for="title">Title (required):</label>
+						<input type="text" id="title" name="title" required />
 
-					<label for="mediaUrl">Image URL:</label>
-					<input type="url" id="mediaUrl" name="mediaUrl" />
+						<label for="mediaUrl">Image URL:</label>
+						<input type="url" id="mediaUrl" name="mediaUrl" />
 
-					<label for="mediaAlt">Image Alt Text:</label>
-					<input type="text" id="mediaAlt" name="mediaAlt" />
-				</fieldset>
+						<label for="mediaAlt">Image Alt Text:</label>
+						<input type="text" id="mediaAlt" name="mediaAlt" />
+					</fieldset>
 
-				<fieldset>
-					<label for="body">Your Story:</label>
-					<textarea class="edit-content" id="body" name="body"></textarea>
+					<fieldset>
+						<label for="body">Your Story:</label>
+						<textarea class="edit-content" id="body" name="body"></textarea>
 
-					<button type="submit">Save Post</button>
-				</fieldset>
-			</form>
-			<!-- Delete button outside the form element to avoid submitting the form -->
-			<button id="delete-button" type="button">Delete Post</button>
+						<button type="submit">Save Post</button>
+					</fieldset>
+				</form>
+				<!-- Delete button outside the form element to avoid submitting the form -->
+				<button class="editform-delete" id="delete-button" type="button">Delete Post</button>
+			</div>
 
 			<div class="errormsg" id="error-message"></div>
 			<div class="successmsg" id="success-message"></div>

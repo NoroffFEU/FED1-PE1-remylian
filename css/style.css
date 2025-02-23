@@ -80,6 +80,10 @@ footer p {
 	color: red;
 }
 
+.successmsg {
+	color: green;
+}
+
 @media (width<900px) {
 	.header-nav-items {
 		gap: 0;
