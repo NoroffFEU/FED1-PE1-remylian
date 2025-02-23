@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 			// Redirect to post details.
 			setTimeout(() => {
-				window.location.href = `/post/index.html?username=${username}&id=${postId}`;
+				window.location.href = `post/index.html?username=${username}&id=${postId}`;
 			}, 1500);
 		}, errorMessageDiv)
 	);
