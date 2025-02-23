@@ -11,6 +11,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 		const response = await apiRequest(`/blog/posts/${username}`);
 		const posts = response.data;
 
+		// Check if there are no posts.
+		if (!posts || posts.length === 0) {
+			// Display message in the carousel container.
+			const carouselContainer = document.getElementById('carousel-container');
+			carouselContainer.innerHTML = `<p class="no-posts-msg">You haven't told any stories yet.</p>`;
+
+			// Display message in the thumbnail grid container.
+			const gridContainer = document.getElementById('thumbnail-grid');
+			gridContainer.innerHTML = `<p class="no-posts-msg">You have no stories on the storyboard</p>`;
+
+			return;
+		}
+
 		const carouselPosts = posts.slice(0, 3); // initialize carousel (3 first posts)
 		initCarousel(carouselPosts);
 
@@ -21,8 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 			gridContainer.appendChild(thumbnail);
 		});
 	} catch (error) {
-		// If there is a specific error container in  HTML, use it.
-		// Otherwise, errors will be displayed in the document body.
+		// use errorcontainer. If no container, display errors in document body.
 		const feedErrorContainer = document.getElementById('feed-error-message');
 		handleError(error, feedErrorContainer || document.body);
 	}
@@ -38,7 +50,7 @@ function createThumbnail(post) {
 	// Pass the username (from the post author)
 	thumb.addEventListener('click', () => {
 		const authorName = post.author?.name || localStorage.getItem('username') || 'MainUser';
-		window.location.href = `./post/index.html?username=${encodeURIComponent(authorName)}&id=${post.id}`;
+		window.location.href = `post/index.html?username=${encodeURIComponent(authorName)}&id=${post.id}`;
 	});
 	return thumb;
 }

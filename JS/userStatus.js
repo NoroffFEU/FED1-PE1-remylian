@@ -8,7 +8,7 @@ export function navByUserStatus() {
 
 	let navHTML = `
 	<ul class="header-home">
-	<li class="header-nav-home"><a href="index.html"><img src="img/home dark.svg" alt="home icon"></a></li>
+	<li class="header-nav-home"><a href="index.html"><img src="img/home.svg" alt="home icon"></a></li>
 	</ul>`;
 
 	// statement to render nav elements based on status (logged in or not).

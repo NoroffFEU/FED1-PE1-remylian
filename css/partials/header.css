@@ -71,13 +71,13 @@ a:visited {
 	font-family: var(--body-text);
 	font-size: 1.2rem;
 	border-radius: 0.25rem;
-	transition: 0.4s;
+	transition: 0.2s;
 }
 
 .nav-logout:hover {
 	background-color: var(--bg-color-2);
 	/* padding-left: 1rem; */
-	transition: 0.4s;
+	transition: 0.2s;
 }
 
 .nav-logout:active {
