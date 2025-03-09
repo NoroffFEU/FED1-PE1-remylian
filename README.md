@@ -1,40 +1,41 @@
-# Your project title
+# Project Exam 1: 
 
 ![image](https://i.ibb.co/pjZxq0VH/blogpage.png)
 
-A simple overview of the use/purpose of the project.
+In The exam project, I have been hired to build a front-end user interface for an existing API blogging application. This responsive web application allows users to view dynamic blog posts, register, login, and manage their posts using their own account for testing.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+The Adventurer's Alehouse project is designed to put into practice the skills learned during the FED1 program. The main goals of this project are to:
 
-You can add some bullet points if you'd like to:
+- **Interpret a Brief:** Understand and implement the client's requirements.
+- **Plan Your Solution:** Outline the structure and user flow for a dynamic blog application.
+- **Design a User Interface:** Create an engaging and responsive design that works across all devices.
+- **Build and Test a Responsive Web Application:** Ensure the application adapts seamlessly to various screen sizes, maintaining usability and accessibility.
 
-- List item 1
-- List item 2
-- List item 3
+Key features include:
+- User registration, login, and blog post management.
+- A dynamic and responsive interface built with semantic HTML, CSS, and vanilla JavaScript.
+- Integration with an existing API to retrieve and display blog posts.
 
 ## Built With
 
 - **HTML5** – For semantic and accessible markup.
-- **CSS3** – For styling and responsive design.
+- **CSS3** – Custom styling without frameworks, using Flexbox and CSS Grid for responsive design.
+- **Vanilla JavaScript** – For dynamic functionality and interactivity.
 
 ## Getting Started
-
-### Installing
-
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
 
 ### Installing
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/NoroffFEU/html-css-course-assignment-remylian.git
+   git clone https://github.com/NoroffFEU/FED1-PE1-remylian
 
 2. Navigate to the project directory: 
    ```bash
-   cd html-css-course-assignment-remylian
+   cd FED1-PE1-remylian
 
 3. Open index.html in your browser. 
 
